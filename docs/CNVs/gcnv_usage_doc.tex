@@ -1,4 +1,4 @@
-\documentclass[nofootinbib,amssymb,amsmath]{revtex4}
+\documentclass[nofootinbib,amssymb,amsmath]{article}
 \usepackage{mathtools}
 \usepackage{amsthm}
 \usepackage{algorithm}
@@ -7,6 +7,8 @@
 \usepackage{graphicx}
 \usepackage{color}
 \usepackage{mathrsfs}
+\usepackage{fullpage}
+\usepackage{courier}
 
 %Put an averaged random variable between brackets
 \DeclareMathOperator*{\argmax}{\arg\!\max}
@@ -92,13 +94,64 @@
 
 \date{\today}
 
-\begin{abstract}
-todo.
-\end{abstract}
-
 \maketitle
 
-\section{Introduction}
+\section{What is GATK gCNV?}
+GATK gCNV is a read-depth based germline copy-number variant (CNV) calling tool.
+
+\section{Overview of GATK gCNV pipeline}
+The necessity of data modeling in general, ploidy determination, and data preparation in particular for GATK gCNV.
+
+\subsection{COHORT mode}
+todo.
+
+\subsection{CASE mode}
+todo.
+
+\subsection{Scalability and task sharding}
+
+\section{Setting up GATK gCNV runtime environment}
+todo. setting up the \texttt{conda} environment for \texttt{gcnvkernel}.
+
+\section{Preparing the data and resources}
+todo.
+
+\section{Components of GATK gCNV}
+
+\subsection{\texttt{DetermineGermlineContigPloidy}}
+todo.
+
+\subsubsection{Purpose of the Tool}
+todo.
+
+\subsubsection{Operation Modes}
+todo.
+
+\subsubsection{Description of Arguments}
+todo.
+
+\subsection{\texttt{GermlineCNVCaller}}
+todo.
+
+\subsubsection{Purpose of the Tool}
+todo.
+
+\subsubsection{Operation Modes}
+todo.
+
+\subsubsection{Description of Arguments}
+todo.
+
+\subsection{\texttt{GermlineCNVPostProcessor}}
+todo.
+
+\subsection{Description of Hybrid ADVI Inference Arguments}
+todo.
+
+\section{Running GATK gCNV pipeline manually}
+todo.
+
+\section{Running GATK gCNV via WDL scripts}
 todo.
 
 \end{document}
