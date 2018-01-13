@@ -4,6 +4,7 @@ import org.apache.commons.math3.exception.MaxCountExceededException;
 import org.apache.commons.math3.special.Beta;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.broadinstitute.hellbender.tools.copynumber.formats.CopyNumberFormatsUtils;
 import org.broadinstitute.hellbender.tools.copynumber.formats.records.AllelicCount;
 import org.broadinstitute.hellbender.utils.OptimizationUtils;
 import org.broadinstitute.hellbender.utils.Utils;
@@ -98,8 +99,8 @@ final class AlleleFractionInitializer {
             logger.warn(String.format("The maximum-likelihood estimate for the global parameter %s (%s) was near its boundary (%s), " +
                             "the model is likely not a good fit to the data!  Consider changing parameters for filtering homozygous sites.",
                     parameterName,
-                    String.format(AlleleFractionGlobalParameters.DOUBLE_FORMAT, value),
-                    String.format(AlleleFractionGlobalParameters.DOUBLE_FORMAT, maxValue)));
+                    CopyNumberFormatsUtils.formatDouble(value),
+                    CopyNumberFormatsUtils.formatDouble(maxValue)));
         }
     }
 
